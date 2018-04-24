@@ -49,11 +49,11 @@ public class ClientToServer implements Runnable {
 			
 			File folder = new File(folderName);
 			File[] listOfFiles = folder.listFiles();
-			System.out.println("no of files:"+listOfFiles.length);
+			//System.out.println("no of files:"+listOfFiles.length);
 			
 			for (int i = 0; i < listOfFiles.length; i++) 
 			{
-				System.out.println("Adding files initially");
+				//System.out.println("Adding files initially");
 				Integer rfcNo = Integer.parseInt(listOfFiles[i].getName().substring(3, (int) (listOfFiles[i].getName().length() - 4)));
 				request = "ADD<sp>RFC<sp>" + rfcNo + "<sp>P2P-CI/1.0<cr><lf>Host:<sp>" + ipAddress
 						+ "<cr><lf>Port:<sp>" + portNumber + "<cr><lf>Title:<sp>" + listOfFiles[i].getName()

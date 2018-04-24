@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class MyClient 
 {
-	public static final String client_location ="E:\\clientFolders\\";
+	public static final String client_location ="";
 
 	public static void main(String[] args) throws UnknownHostException 
 	{
@@ -19,8 +19,8 @@ public class MyClient
 		ServerSocket serverSocket = null;
 		System.out.println("Assign a folder number to this client: ");
 		Scanner scanner = new Scanner(System.in);
-		Integer foldernumber = new Integer(scanner.nextInt());
-		String folderName = client_location + foldernumber.toString() + "\\";	
+		String folder = scanner.next();
+		String folderName = client_location + folder.toString();	
 		System.out.println("What is server's IP address?");
 		String serverIP = scanner.next();
 		try 
